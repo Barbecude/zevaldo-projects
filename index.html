@@ -10,6 +10,10 @@
             darkMode: 'class',
             theme: {
                 extend: {
+                    fontFamily: {
+                        mono: ['JetBrains Mono', 'monospace'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
                     colors: {
                         zinc: {
                             850: '#1f1f22',
@@ -29,7 +33,9 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <style>
         body {
@@ -101,27 +107,33 @@
 
         <!-- Header / Intro -->
         <header class="mb-16">
-            <div class="flex items-start justify-between mb-2">
-                <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
-                    <div class="flex items-center gap-3">
-                       
-                        <h1 class="text-xl md:text-2xl font-medium tracking-tight text-zinc-900 dark:text-zinc-100">
-                            Muhammad Zevaldo Trijialghi
-                        </h1>
+            <div class="flex items-start justify-between mb-8">
+                <div class="flex flex-col gap-6">
+                    <div class="space-y-1.5">
+                        <div class="flex items-center gap-3">
+                            <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+                                Muhammad Zevaldo Trijialghi
+                            </h1>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-500 border border-zinc-200 dark:border-zinc-700 select-none font-mono">
+                              <iconify-icon icon="lucide:globe" width="12" stroke-width="1.5"></iconify-icon>
+                                GMT+7 
+                            </span>
+                        </div>
+                        <p class="text-base text-zinc-500 dark:text-zinc-400 font-medium"
+                            style="font-family: 'JetBrains Mono', monospace;">
+                            Founder & Software Engineer
+                        </p>
                     </div>
-                    <span
-                        class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700 w-fit transition-colors hover:bg-zinc-200 dark:hover:bg-zinc-700 cursor-default">
-                        ID
-                    </span>
-
                 </div>
+
                 <button id="themeToggle"
-                    class="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-500 dark:text-zinc-400 transition-colors">
+                    class="p-2.5 rounded-lg border border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all">
                     <iconify-icon id="themeIcon" icon="lucide:moon" width="20" stroke-width="1.5"></iconify-icon>
                 </button>
             </div>
-            <p class="text-zinc-500 dark:text-zinc-400 text-sm md:text-base mb-6 leading-relaxed">
-                <strong class="text-zinc-900 dark:text-zinc-100 font-medium">Founder & Software Engineer.</strong><br>
+
+            <p class="text-zinc-500 dark:text-zinc-400 text-sm md:text-base mb-8 leading-relaxed max-w-xl">
                 Building high-performance <span
                     class="relative inline-block text-zinc-900 dark:text-zinc-100 font-medium">SaaS<svg
                         class="absolute -bottom-1 left-0 w-full h-2 text-indigo-500/50 dark:text-indigo-400/50 -rotate-2"
@@ -163,7 +175,7 @@
             <h2
                 class="text-sm font-medium text-zinc-900 dark:text-zinc-100 mb-6 tracking-tight flex items-center gap-2">
                 <iconify-icon icon="lucide:folder-git-2" width="16" stroke-width="1.5"></iconify-icon>
-                Projects <span class="text-zinc-400 dark:text-zinc-400">(2)</span>
+                Selected Projects <span class="text-zinc-400 dark:text-zinc-400 font-mono">(2)</span>
             </h2>
 
             <div class="flex flex-col gap-6">
@@ -229,27 +241,27 @@
 
                         <div class="flex flex-wrap gap-2">
                             <span
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors font-mono">
                                 <iconify-icon icon="simple-icons:nextdotjs" width="12"></iconify-icon>
                                 Next.js
                             </span>
                             <span
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors font-mono">
                                 <iconify-icon icon="simple-icons:prisma" width="12"></iconify-icon>
                                 Prisma
                             </span>
                             <span
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors font-mono">
                                 <iconify-icon icon="simple-icons:lemonsqueezy" width="12"></iconify-icon>
                                 Lemon Squeezy
                             </span>
                             <span
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors font-mono">
                                 <iconify-icon icon="simple-icons:instagram" width="12"></iconify-icon>
                                 Instagram Graph API
                             </span>
                             <span
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors font-mono">
                                 <iconify-icon icon="simple-icons:googlegemini" width="12"></iconify-icon>
                                 Gemini API
                             </span>
@@ -304,12 +316,12 @@
 
                         <div class="flex flex-wrap gap-2">
                             <span
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors font-mono">
                                 <iconify-icon icon="simple-icons:nextdotjs" width="12"></iconify-icon>
                                 Next.js
                             </span>
                             <span
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors font-mono">
                                 <iconify-icon icon="simple-icons:youtube" width="12"></iconify-icon>
                                 YouTube API v3
                             </span>
