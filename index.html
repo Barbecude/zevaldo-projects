@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -97,39 +98,52 @@
     class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 antialiased selection:bg-zinc-100 dark:selection:bg-zinc-800 selection:text-zinc-900 dark:selection:text-zinc-100 min-h-screen flex flex-col transition-colors duration-300 relative">
 
 
-    <!-- Background Pattern -->
     <div
         class="fixed inset-0 -z-10 h-full w-full bg-[radial-gradient(#d4d4d8_1px,transparent_1px)] dark:bg-[radial-gradient(#3f3f46_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] pointer-events-none">
     </div>
 
-    <!-- Main Container -->
     <main class="w-full max-w-2xl mx-auto py-6 md:py-20 px-6 flex-grow">
 
-        <!-- Header / Intro -->
         <header class="mb-16">
             <div class="flex items-start justify-between mb-8">
-                <div class="flex flex-col gap-6">
-                    <div class="space-y-1.5">
-                        <div class="flex items-center gap-3">
-                            <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
-                                Muhammad Zevaldo Trijialghi
-                            </h1>
-                            <span
-                                class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-500 border border-zinc-200 dark:border-zinc-700 select-none font-mono">
-                              <iconify-icon icon="lucide:globe" width="12" stroke-width="1.5"></iconify-icon>
-                                GMT+7 
-                            </span>
+                <div class="flex flex-row items-start gap-4 md:gap-6">
+
+                    <div class="shrink-0 relative">
+                        <div
+                            class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-zinc-100 dark:bg-zinc-800 border-2 border-white dark:border-zinc-900 shadow-sm overflow-hidden group cursor-pointer">
+                            <img src="/assets/personal-avatar.png" alt="Avatar"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         </div>
-                        <p class="text-base text-zinc-500 dark:text-zinc-400 font-medium"
-                            style="font-family: 'JetBrains Mono', monospace;">
-                            Founder & Software Engineer
-                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-6 pt-1">
+                        <div class="space-y-1.5">
+                            <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+                                <h1
+                                    class="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+                                    Zevaldo Trijialghi
+                                </h1>
+                                <span
+                                    class="w-fit inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-500 border border-zinc-200 dark:border-zinc-700 select-none font-mono">
+                                    <iconify-icon icon="lucide:globe" width="12" stroke-width="1.5"></iconify-icon>
+                                    GMT+7
+                                </span>
+                            </div>
+                            <p class="text-base text-zinc-500 dark:text-zinc-400 font-medium"
+                                style="font-family: 'JetBrains Mono', monospace;">
+                                Founder, Engineer & Creator
+                            </p>
+                        </div>
                     </div>
                 </div>
 
                 <button id="themeToggle"
-                    class="p-2.5 rounded-lg border border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all">
-                    <iconify-icon id="themeIcon" icon="lucide:moon" width="20" stroke-width="1.5"></iconify-icon>
+                    class="group relative p-2 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors border border-transparent hover:border-zinc-200 dark:hover:border-zinc-800">
+                    <span class="sr-only">Toggle theme</span>
+                    <iconify-icon icon="lucide:sun" width="18" stroke-width="1.5"
+                        class="hidden dark:block text-zinc-400 group-hover:text-zinc-100 transition-colors"></iconify-icon>
+                    <iconify-icon icon="lucide:moon" width="18" stroke-width="1.5"
+                        class="block dark:hidden text-zinc-500 group-hover:text-zinc-900 transition-colors"></iconify-icon>
                 </button>
             </div>
 
@@ -139,11 +153,10 @@
                         class="absolute -bottom-1 left-0 w-full h-2 text-indigo-500/50 dark:text-indigo-400/50 -rotate-2"
                         viewBox="0 0 100 20" preserveAspectRatio="none">
                         <path d="M0 10 Q50 20 100 10" stroke="currentColor" stroke-width="6" fill="none" />
-                    </svg></span> products for businesses & creators.
+                    </svg></span> products for businesses. Sharing what I learn along the way through content creation.
             </p>
 
-            <!-- Meta Data Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-zinc-600 dark:text-zinc-400">
+            <div class="grid grid-cols-2 gap-3 text-xs md:text-sm text-zinc-600 dark:text-zinc-400">
                 <div class="flex items-center gap-2">
                     <iconify-icon icon="lucide:graduation-cap" class="text-zinc-400 dark:text-zinc-500" width="16"
                         stroke-width="1.5"></iconify-icon>
@@ -167,19 +180,16 @@
             </div>
         </header>
 
-        <!-- Separator -->
         <div class="h-px w-full bg-zinc-100 dark:bg-zinc-800 mb-16"></div>
 
-        <!-- Projects Section -->
-        <section>
+        <section class="mb-16">
             <h2
                 class="text-sm font-medium text-zinc-900 dark:text-zinc-100 mb-6 tracking-tight flex items-center gap-2">
                 <iconify-icon icon="lucide:folder-git-2" width="16" stroke-width="1.5"></iconify-icon>
-                Selected Projects <span class="text-zinc-400 dark:text-zinc-400 font-mono">(2)</span>
+                Selected Projects <span class="text-zinc-400 dark:text-zinc-400 font-mono">02</span>
             </h2>
 
             <div class="flex flex-col gap-6">
-                <!-- Project 1: reptly.app -->
                 <div class="group relative border border-zinc-200 dark:border-zinc-800 rounded-lg p-5 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-sm transition-all duration-300 ease-out bg-white dark:bg-zinc-900/40 cursor-pointer"
                     onclick="window.open('https://reptly.app', '_blank')">
                     <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-3">
@@ -229,39 +239,32 @@
                             <iconify-icon icon="lucide:cloud" class="text-purple-500" width="14"></iconify-icon>
                             <span>SaaS</span>
                         </div>
-                        <div class="flex items-center gap-1.5">
-                            <iconify-icon icon="lucide:dollar-sign" class="text-emerald-500" width="14"></iconify-icon>
-                            <span>In-App Purchases</span>
-                        </div>
-
                     </div>
 
-                    <!-- Tech Stack -->
                     <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800">
-
                         <div class="flex flex-wrap gap-2">
                             <span
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors font-mono">
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-mono">
                                 <iconify-icon icon="simple-icons:nextdotjs" width="12"></iconify-icon>
                                 Next.js
                             </span>
                             <span
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors font-mono">
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-mono">
                                 <iconify-icon icon="simple-icons:prisma" width="12"></iconify-icon>
                                 Prisma
                             </span>
                             <span
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors font-mono">
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-mono">
                                 <iconify-icon icon="simple-icons:lemonsqueezy" width="12"></iconify-icon>
                                 Lemon Squeezy
                             </span>
                             <span
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors font-mono">
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-mono">
                                 <iconify-icon icon="simple-icons:instagram" width="12"></iconify-icon>
                                 Instagram Graph API
                             </span>
                             <span
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors font-mono">
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-mono">
                                 <iconify-icon icon="simple-icons:googlegemini" width="12"></iconify-icon>
                                 Gemini API
                             </span>
@@ -269,7 +272,6 @@
                     </div>
                 </div>
 
-                <!-- Project 2: Ultimate YouTube Creator Dashboard -->
                 <div class="group relative border border-zinc-200 dark:border-zinc-800 rounded-lg p-5 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-sm transition-all duration-300 ease-out bg-white dark:bg-zinc-900/40 cursor-pointer"
                     onclick="window.open('https://youtube-dashboard-rust.vercel.app', '_blank')">
                     <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-3">
@@ -311,17 +313,15 @@
                         </div>
                     </div>
 
-                    <!-- Tech Stack -->
                     <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800">
-
                         <div class="flex flex-wrap gap-2">
                             <span
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors font-mono">
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-mono">
                                 <iconify-icon icon="simple-icons:nextdotjs" width="12"></iconify-icon>
                                 Next.js
                             </span>
                             <span
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/50 dark:border-zinc-700/50 hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors font-mono">
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-mono">
                                 <iconify-icon icon="simple-icons:youtube" width="12"></iconify-icon>
                                 YouTube API v3
                             </span>
@@ -331,7 +331,174 @@
             </div>
         </section>
 
-        <!-- Contact / Connect -->
+        <section>
+            <h2
+                class="text-sm font-medium text-zinc-900 dark:text-zinc-100 mb-6 tracking-tight flex items-center gap-2">
+                <iconify-icon icon="lucide:share-2" width="16" stroke-width="1.5"></iconify-icon>
+                Social Media
+            </h2>
+
+            <div class="flex flex-col gap-4">
+
+                <div class="group relative border border-zinc-200 dark:border-zinc-800 rounded-lg p-5 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-sm transition-all duration-300 ease-out bg-white dark:bg-zinc-900/40 cursor-pointer"
+                    onclick="window.open('https://youtube.com/@DudeBarbecude', '_blank')">
+                    <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-3">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-red-50 dark:bg-red-900/10 flex items-center justify-center text-red-600 dark:text-red-500 border border-red-100 dark:border-red-900/30">
+                                <iconify-icon icon="lucide:youtube" width="18" stroke-width="1.5"></iconify-icon>
+                            </div>
+                            <div>
+                                <a href="https://youtube.com/@DudeBarbecude" target="_blank"
+                                    class="font-medium text-base tracking-tight text-zinc-900 dark:text-zinc-100 hover:underline block"
+                                    onclick="event.stopPropagation()">DudeBarbecude</a>
+                                <span class="text-[11px] text-zinc-400 dark:text-zinc-500 font-mono block">67K
+                                    Subscribers</span>
+
+                            </div>
+                        </div>
+
+                        <a href="https://youtube.com/@DudeBarbecude" target="_blank"
+                            class="hover:underline hidden sm:flex items-center gap-1 text-xs font-medium text-zinc-500 hover:text-red-600 transition-colors"
+                            onclick="event.stopPropagation()">
+                            Visit Channel
+                            <iconify-icon icon="lucide:arrow-right" width="14" stroke-width="1.5"></iconify-icon>
+                        </a>
+                    </div>
+                    <div
+                        class="flex flex-wrap items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400 pl-[3.25rem]">
+                        <div class="flex items-center gap-1.5">
+                            <iconify-icon icon="lucide:gamepad-2" class="text-blue-500" width="14"></iconify-icon>
+                            <span>Gaming</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <iconify-icon icon="lucide:pickaxe" class="text-emerald-500" width="14"></iconify-icon>
+                            <span>Minecraft</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <iconify-icon icon="lucide:tent" class="text-indigo-500" width="14"></iconify-icon>
+                            <span>Survival</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative border border-zinc-200 dark:border-zinc-800 rounded-lg p-5 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-sm transition-all duration-300 ease-out bg-white dark:bg-zinc-900/40 cursor-pointer"
+                    onclick="window.open('https://instagram.com/zzev.dev', '_blank')">
+                    <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-3">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-pink-50 dark:bg-pink-900/10 flex items-center justify-center text-pink-600 dark:text-pink-500 border border-pink-100 dark:border-pink-900/30">
+                                <iconify-icon icon="simple-icons:instagram" width="18"></iconify-icon>
+                            </div>
+                            <div>
+                                <a href="https://instagram.com/zzev.dev" target="_blank"
+                                    class="font-medium text-base tracking-tight text-zinc-900 dark:text-zinc-100 hover:underline block"
+                                    onclick="event.stopPropagation()">zzev.dev</a>
+                                <span class="text-[11px] text-zinc-400 dark:text-zinc-500 font-mono block">1
+                                    Followers</span>
+                            </div>
+                        </div>
+
+                        <a href="https://instagram.com/zzev.dev" target="_blank"
+                            class="hover:underline hidden sm:flex items-center gap-1 text-xs font-medium text-zinc-500 hover:text-pink-600 transition-colors"
+                            onclick="event.stopPropagation()">
+                            Visit Profile
+                            <iconify-icon icon="lucide:arrow-right" width="14" stroke-width="1.5"></iconify-icon>
+                        </a>
+                    </div>
+                    <div
+                        class="flex flex-wrap items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400 pl-[3.25rem]">
+                        <div class="flex items-center gap-1.5">
+                            <iconify-icon icon="lucide:code-2" class="text-red-500" width="14"></iconify-icon>
+                            <span>Coding</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col gap-4 mt-4">
+                <div class="group relative border border-zinc-200 dark:border-zinc-800 rounded-lg p-5 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-sm transition-all duration-300 ease-out bg-white dark:bg-zinc-900/40 cursor-pointer"
+                    onclick="window.open('https://github.com/barbecude', '_blank')">
+                    <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-3">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-zinc-900 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700">
+                                <iconify-icon icon="simple-icons:github" width="18"></iconify-icon>
+                            </div>
+                            <div>
+                                <a href="https://github.com/barbecude" target="_blank"
+                                    class="font-medium text-base tracking-tight text-zinc-900 dark:text-zinc-100 hover:underline block"
+                                    onclick="event.stopPropagation()">barbecude</a>
+                                <span class="text-xs text-zinc-500 dark:text-zinc-400 block">Open Source
+                                    Enthusiast</span>
+                            </div>
+                        </div>
+
+                        <a href="https://github.com/barbecude" target="_blank"
+                            class="hover:underline hidden sm:flex items-center gap-1 text-xs font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-300 transition-colors"
+                            onclick="event.stopPropagation()">
+                            Visit Profile
+                            <iconify-icon icon="lucide:arrow-right" width="14" stroke-width="1.5"></iconify-icon>
+                        </a>
+                    </div>
+                    <div
+                        class="flex flex-wrap items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400 pl-[3.25rem]">
+                        <div class="flex items-center gap-1.5">
+                            <iconify-icon icon="lucide:code-2" class="text-blue-500" width="14"></iconify-icon>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <iconify-icon icon="lucide:layout-template" class="text-yellow-500"
+                                width="14"></iconify-icon>
+                            <span>Web Development</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <iconify-icon icon="lucide:git-branch" class="text-orange-500" width="14"></iconify-icon>
+                            <span>Open Source</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative border border-zinc-200 dark:border-zinc-800 rounded-lg p-5 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-sm transition-all duration-300 ease-out bg-white dark:bg-zinc-900/40 cursor-pointer"
+                    onclick="window.open('https://www.linkedin.com/in/muhammad-zevaldo-trijialghi-a66358390', '_blank')">
+                    <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-3">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/10 flex items-center justify-center text-blue-600 dark:text-blue-500 border border-blue-100 dark:border-blue-900/30">
+                                <iconify-icon icon="simple-icons:linkedin" width="18"></iconify-icon>
+                            </div>
+                            <div>
+                                <a href="https://www.linkedin.com/in/muhammad-zevaldo-trijialghi-a66358390"
+                                    target="_blank"
+                                    class="font-medium text-base tracking-tight text-zinc-900 dark:text-zinc-100 hover:underline block"
+                                    onclick="event.stopPropagation()">Muhammad Zevaldo Trijialghi</a>
+                                <span class="text-xs text-zinc-500 dark:text-zinc-400 block">Professional Profile</span>
+                            </div>
+                        </div>
+
+                        <a href="https://www.linkedin.com/in/muhammad-zevaldo-trijialghi-a66358390" target="_blank"
+                            class="hover:underline hidden sm:flex items-center gap-1 text-xs font-medium text-zinc-500 hover:text-blue-600 transition-colors"
+                            onclick="event.stopPropagation()">
+                            Connect
+                            <iconify-icon icon="lucide:arrow-right" width="14" stroke-width="1.5"></iconify-icon>
+                        </a>
+                    </div>
+                    <div
+                        class="flex flex-wrap items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400 pl-[3.25rem]">
+                        <div class="flex items-center gap-1.5">
+                            <iconify-icon icon="lucide:users" class="text-cyan-500" width="14"></iconify-icon>
+                            <span>Networking</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <iconify-icon icon="lucide:briefcase" class="text-indigo-500" width="14"></iconify-icon>
+                            <span>Career</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="mt-16">
             <h2 class="text-sm font-medium text-zinc-900 dark:text-zinc-100 mb-4 tracking-tight">Connect</h2>
             <div class="flex flex-col gap-4">
@@ -343,28 +510,15 @@
                         <iconify-icon id="emailChevron" icon="lucide:chevron-down" width="14" stroke-width="2"
                             class="transition-transform duration-300"></iconify-icon>
                     </button>
-                    <a href="https://github.com/barbecude" target="_blank"
-                        class="flex items-center gap-2 text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors duration-200">
-                        <iconify-icon icon="lucide:github" width="16" stroke-width="1.5"></iconify-icon>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://instagram.com/inizevbukansih" target="_blank"
-                        class="flex items-center gap-2 text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors duration-200">
-                        <iconify-icon icon="lucide:instagram" width="16" stroke-width="1.5"></iconify-icon>
-                        <span>Instagram</span>
-                    </a>
                 </div>
 
-                <!-- Email Dropdown Form -->
                 <div id="emailDropdown" class="email-dropdown">
                     <div class="border border-zinc-200 dark:border-zinc-800 rounded-lg p-5">
                         <form id="emailForm" class="space-y-4">
-                            <!-- Hidden field for Web3Forms -->
                             <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                             <input type="hidden" name="subject" value="New message from Portfolio">
                             <input type="hidden" name="from_name" value="Portfolio Contact Form">
 
-                            <!-- Success Message -->
                             <div id="successMessage"
                                 class="hidden success-message p-4 bg-emerald-50 dark:bg-emerald-900/10 border border-emerald-200 dark:border-emerald-800 rounded-lg">
                                 <div class="flex items-center gap-2 text-emerald-800 dark:text-emerald-200">
@@ -374,7 +528,6 @@
                                 </div>
                             </div>
 
-                            <!-- Error Message -->
                             <div id="errorMessage"
                                 class="hidden p-4 bg-red-50 dark:bg-red-900/10 border border-red-200 dark:border-red-800 rounded-lg">
                                 <div class="flex items-center gap-2 text-red-800 dark:text-red-200">
@@ -458,26 +611,16 @@
 
         // Theme Toggle Logic
         const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
-
-        // Set initial icon
-        if (document.documentElement.classList.contains('dark')) {
-            themeIcon.setAttribute('icon', 'lucide:sun');
-        } else {
-            themeIcon.setAttribute('icon', 'lucide:moon');
-        }
 
         themeToggle.addEventListener('click', () => {
             // Toggle class
             document.documentElement.classList.toggle('dark');
 
-            // Save preference and update icon
+            // Save preference
             if (document.documentElement.classList.contains('dark')) {
                 localStorage.setItem('color-theme', 'dark');
-                themeIcon.setAttribute('icon', 'lucide:sun');
             } else {
                 localStorage.setItem('color-theme', 'light');
-                themeIcon.setAttribute('icon', 'lucide:moon');
             }
         });
 
@@ -535,7 +678,6 @@
         });
     </script>
 
-    <!-- Simple Footer -->
     <footer class="w-full max-w-2xl mx-auto px-6 py-10 border-t border-zinc-100 dark:border-zinc-800">
         <div class="flex items-center justify-between text-xs text-zinc-400 dark:text-zinc-500">
             <span>Last updated 01/01/2026</span>

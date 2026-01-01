@@ -31,7 +31,7 @@ To run this project locally for development or inspection:
 I am open to discussing new opportunities, collaborations, or technical consultations.
 
 *   **Email**: chillydudee@gmail.com
-*   **LinkedIn**: [Professional Profile](https://linkedin.com)
+*   **LinkedIn**: [Professional Profile](http://linkedin.com/in/muhammad-zevaldo-trijialghi-a66358390)
 *   **GitHub**: [@barbecude](https://github.com/barbecude)
 *   **Instagram**: [@inizevbukansih](https://instagram.com/inizevbukansih)
 
