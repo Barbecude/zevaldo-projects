@@ -48,13 +48,15 @@
             max-height: 0;
             opacity: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out, opacity 0.3s ease-out, margin 0.3s ease-out;
+            transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease-out, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(10px) scale(0.95);
+            transform-origin: bottom right;
         }
 
         .email-dropdown.active {
             max-height: 500px;
             opacity: 1;
-            margin-top: 1rem;
+            transform: translateY(0) scale(1);
         }
 
         .success-message {
@@ -127,7 +129,7 @@
                             </div>
                             <p class="text-base text-zinc-500 dark:text-zinc-400 font-medium"
                                 style="font-family: 'JetBrains Mono', monospace;">
-                                Founder, Engineer & Creator
+                                Software Engineer & Creator
                             </p>
                         </div>
                     </div>
@@ -152,7 +154,7 @@
                     </svg></span> products for businesses. Sharing what I learn along the way through content creation.
             </p>
 
-            <div class="grid grid-cols-2 gap-3 text-xs md:text-sm text-zinc-600 dark:text-zinc-400">
+            <div class="grid grid-cols-3 gap-3 text-xs md:text-sm text-zinc-600 dark:text-zinc-400">
                 <div class="flex items-center gap-2">
                     <iconify-icon icon="lucide:graduation-cap" class="text-zinc-400 dark:text-zinc-500" width="16"
                         stroke-width="1.5"></iconify-icon>
@@ -167,11 +169,6 @@
                     <iconify-icon icon="lucide:code-2" class="text-zinc-400 dark:text-zinc-500" width="16"
                         stroke-width="1.5"></iconify-icon>
                     <span>Computer Science</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <iconify-icon icon="lucide:user" class="text-zinc-400 dark:text-zinc-500" width="16"
-                        stroke-width="1.5"></iconify-icon>
-                    <span>18 y/o</span>
                 </div>
             </div>
         </header>
@@ -193,7 +190,7 @@
                         <div class="flex items-center gap-1">
                             <a href="https://reptly.app" target="_blank"
                                 class="font-medium text-base tracking-tight text-zinc-900 dark:text-zinc-100 hover:underline"
-                                onclick="event.stopPropagation()">reptly.app</a>
+                                onclick="event.stopPropagation()">Reptly</a>
                             <span
                                 class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-green-50 dark:bg-green-900/10 text-green-700 dark:text-green-400 border border-green-100/50 dark:border-green-700/50 tracking-wide">
                                 Live
@@ -269,19 +266,22 @@
                 </div>
 
                 <div class="group relative border border-zinc-200 dark:border-zinc-800 rounded-lg p-5 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-sm transition-all duration-300 ease-out bg-white dark:bg-zinc-900/40 cursor-pointer"
-                    onclick="window.open('https://youtube-dashboard-rust.vercel.app', '_blank')">
+                    onclick="window.open('https://previews-topaz.vercel.app/', '_blank')">
                     <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-3">
-
                         <div class="flex items-center gap-2">
-                            <a href="https://youtube-dashboard-rust.vercel.app" target="_blank"
+                            <a href="https://previews-topaz.vercel.app/" target="_blank"
                                 class="font-medium text-base tracking-tight text-zinc-900 dark:text-zinc-100 hover:underline"
-                                onclick="event.stopPropagation()">Ultimate YouTube Dashboard</a>
+                                onclick="event.stopPropagation()">Previewers</a>
                             <span
                                 class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-green-50 dark:bg-green-900/10 text-green-700 dark:text-green-400 border border-green-100/50 dark:border-green-700/50 tracking-wide">
                                 Live
                             </span>
+                            <span
+                                class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-amber-50 dark:bg-amber-900/10 text-amber-700 dark:text-amber-400 border border-amber-100/50 dark:border-amber-700/50 tracking-wide">
+                                Beta
+                            </span>
                         </div>
-                        <a href="https://youtube-dashboard-rust.vercel.app" target="_blank"
+                        <a href="https://previews-topaz.vercel.app/" target="_blank"
                             class="hover:underline hidden sm:flex items-center gap-1 text-xs font-medium text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-900 dark:group-hover:text-zinc-300 transition-colors"
                             onclick="event.stopPropagation()">
                             View Project
@@ -290,22 +290,17 @@
                     </div>
 
                     <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4 max-w-md">
-                        A real-time analytics dashboard for YouTube creators to track performance, revenue, and global
-                        audience insights in one place
+                        A real-time analytics and preview tool for YouTube creators to test thumbnails and analyze retention metrics.
                     </p>
 
                     <div class="flex items-center gap-4 text-xs text-zinc-400 dark:text-zinc-500 mb-4">
                         <div class="flex items-center gap-1.5">
-                            <iconify-icon icon="lucide:bar-chart-3" class="text-blue-500" width="14"></iconify-icon>
-                            <span>Analytics</span>
-                        </div>
-                        <div class="flex items-center gap-1.5">
-                            <iconify-icon icon="lucide:video" class="text-red-500" width="14"></iconify-icon>
+                            <iconify-icon icon="lucide:youtube" class="text-red-500" width="14"></iconify-icon>
                             <span>Creator Tools</span>
                         </div>
                         <div class="flex items-center gap-1.5">
-                            <iconify-icon icon="lucide:github" class="text-zinc-500" width="14"></iconify-icon>
-                            <span>Open Source</span>
+                            <iconify-icon icon="lucide:bar-chart-2" class="text-blue-500" width="14"></iconify-icon>
+                            <span>Analytics</span>
                         </div>
                     </div>
 
@@ -318,12 +313,18 @@
                             </span>
                             <span
                                 class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-mono">
+                                <iconify-icon icon="simple-icons:react" width="12"></iconify-icon>
+                                React
+                            </span>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-mono">
                                 <iconify-icon icon="simple-icons:youtube" width="12"></iconify-icon>
-                                YouTube API v3
+                                YouTube API
                             </span>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -342,13 +343,13 @@
                         <div class="flex items-center gap-3">
                             <div
                                 class="w-10 h-10 rounded-full bg-red-50 dark:bg-red-900/10 flex items-center justify-center text-red-600 dark:text-red-500 border border-red-100 dark:border-red-900/30">
-                                <iconify-icon icon="lucide:youtube" width="18" stroke-width="1.5"></iconify-icon>
+                                <img src="./assets/YouTube.webp" class="w-5 h-5 object-contain" alt="YouTube" />
                             </div>
                             <div>
                                 <a href="https://youtube.com/@DudeBarbecude" target="_blank"
                                     class="font-medium text-base tracking-tight text-zinc-900 dark:text-zinc-100 hover:underline block"
                                     onclick="event.stopPropagation()">DudeBarbecude</a>
-                                <span class="text-[11px] text-zinc-400 dark:text-zinc-500 font-mono block">67K
+                                <span class="text-[11px] text-zinc-400 dark:text-zinc-500 font-mono block">78K
                                     Subscribers</span>
 
                             </div>
@@ -378,38 +379,7 @@
                     </div>
                 </div>
 
-                <div class="group relative border border-zinc-200 dark:border-zinc-800 rounded-lg p-5 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-sm transition-all duration-300 ease-out bg-white dark:bg-zinc-900/40 cursor-pointer"
-                    onclick="window.open('https://instagram.com/zzev.dev', '_blank')">
-                    <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-3">
-                        <div class="flex items-center gap-3">
-                            <div
-                                class="w-10 h-10 rounded-full bg-pink-50 dark:bg-pink-900/10 flex items-center justify-center text-pink-600 dark:text-pink-500 border border-pink-100 dark:border-pink-900/30">
-                                <iconify-icon icon="simple-icons:instagram" width="18"></iconify-icon>
-                            </div>
-                            <div>
-                                <a href="https://instagram.com/zzev.dev" target="_blank"
-                                    class="font-medium text-base tracking-tight text-zinc-900 dark:text-zinc-100 hover:underline block"
-                                    onclick="event.stopPropagation()">zzev.dev</a>
-                                <span class="text-[11px] text-zinc-400 dark:text-zinc-500 font-mono block">1
-                                    Followers</span>
-                            </div>
-                        </div>
-
-                        <a href="https://instagram.com/zzev.dev" target="_blank"
-                            class="hover:underline hidden sm:flex items-center gap-1 text-xs font-medium text-zinc-500 hover:text-pink-600 transition-colors"
-                            onclick="event.stopPropagation()">
-                            Visit Profile
-                            <iconify-icon icon="lucide:arrow-right" width="14" stroke-width="1.5"></iconify-icon>
-                        </a>
-                    </div>
-                    <div
-                        class="flex flex-wrap items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400 pl-[3.25rem]">
-                        <div class="flex items-center gap-1.5">
-                            <iconify-icon icon="lucide:code-2" class="text-red-500" width="14"></iconify-icon>
-                            <span>Coding</span>
-                        </div>
-                    </div>
-                </div>
+    
 
             </div>
 
@@ -448,10 +418,6 @@
                             <iconify-icon icon="lucide:layout-template" class="text-yellow-500"
                                 width="14"></iconify-icon>
                             <span>Web Development</span>
-                        </div>
-                        <div class="flex items-center gap-1.5">
-                            <iconify-icon icon="lucide:git-branch" class="text-orange-500" width="14"></iconify-icon>
-                            <span>Open Source</span>
                         </div>
                     </div>
                 </div>
@@ -495,82 +461,75 @@
             </div>
         </section>
 
-        <section class="mt-16">
-            <h2 class="text-sm font-medium text-zinc-900 dark:text-zinc-100 mb-4 tracking-tight">Connect</h2>
-            <div class="flex flex-col gap-4">
-                <div class="flex flex-wrap gap-4">
-                    <button id="emailToggle"
-                        class="flex items-center gap-2 text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors duration-200 cursor-pointer">
-                        <iconify-icon icon="lucide:mail" width="16" stroke-width="1.5"></iconify-icon>
-                        <span>Email</span>
-                        <iconify-icon id="emailChevron" icon="lucide:chevron-down" width="14" stroke-width="2"
-                            class="transition-transform duration-300"></iconify-icon>
-                    </button>
-                </div>
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3 pointer-events-none">
+        <div id="emailDropdown" class="email-dropdown pointer-events-auto shadow-2xl rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 w-[calc(100vw-3rem)] sm:w-96">
+            <div class="p-5">
+                <form id="emailForm" class="space-y-4">
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="New message from Portfolio">
+                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
 
-                <div id="emailDropdown" class="email-dropdown">
-                    <div class="border border-zinc-200 dark:border-zinc-800 rounded-lg p-5">
-                        <form id="emailForm" class="space-y-4">
-                            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                            <input type="hidden" name="subject" value="New message from Portfolio">
-                            <input type="hidden" name="from_name" value="Portfolio Contact Form">
-
-                            <div id="successMessage"
-                                class="hidden success-message p-4 bg-emerald-50 dark:bg-emerald-900/10 border border-emerald-200 dark:border-emerald-800 rounded-lg">
-                                <div class="flex items-center gap-2 text-emerald-800 dark:text-emerald-200">
-                                    <iconify-icon icon="lucide:check-circle" width="18"></iconify-icon>
-                                    <span class="text-sm font-medium">Message sent successfully! I'll get back to you
-                                        soon.</span>
-                                </div>
-                            </div>
-
-                            <div id="errorMessage"
-                                class="hidden p-4 bg-red-50 dark:bg-red-900/10 border border-red-200 dark:border-red-800 rounded-lg">
-                                <div class="flex items-center gap-2 text-red-800 dark:text-red-200">
-                                    <iconify-icon icon="lucide:alert-circle" width="18"></iconify-icon>
-                                    <span class="text-sm font-medium">Failed to send message. Please try again.</span>
-                                </div>
-                            </div>
-
-                            <div id="formFields" class="pt-0">
-                                <div class="mb-4">
-                                    <label for="sender_email"
-                                        class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
-                                        Your Email
-                                    </label>
-                                    <input type="email" id="sender_email" name="email" required
-                                        class="w-full px-4 py-2.5 text-sm bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-zinc-600 focus:border-transparent transition-all placeholder:text-zinc-400 dark:placeholder:text-zinc-600"
-                                        placeholder="your.email@example.com">
-                                </div>
-
-                                <div class="mb-4">
-                                    <label for="message"
-                                        class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
-                                        Message
-                                    </label>
-                                    <textarea id="message" name="message" required rows="4"
-                                        class="w-full px-4 py-2.5 text-sm bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-zinc-600 focus:border-transparent transition-all resize-none placeholder:text-zinc-400 dark:placeholder:text-zinc-600"
-                                        placeholder="Your message here..."></textarea>
-                                </div>
-
-                                <div class="flex gap-3">
-                                    <button type="submit" id="submitBtn"
-                                        class="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-sm font-medium rounded-lg hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors duration-200">
-                                        <span id="btnText">Send Message</span>
-                                        <iconify-icon id="btnIcon" icon="lucide:send" width="14"></iconify-icon>
-                                        <div id="btnSpinner" class="spinner hidden"></div>
-                                    </button>
-                                    <button type="button" id="cancelBtn"
-                                        class="px-4 py-2.5 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 text-sm font-medium rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors duration-200">
-                                        Cancel
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
+                    <div id="successMessage"
+                        class="hidden success-message p-4 bg-emerald-50 dark:bg-emerald-900/10 border border-emerald-200 dark:border-emerald-800 rounded-lg">
+                        <div class="flex items-center gap-2 text-emerald-800 dark:text-emerald-200">
+                            <iconify-icon icon="lucide:check-circle" width="18"></iconify-icon>
+                            <span class="text-sm font-medium">Message sent successfully! I'll get back to you soon.</span>
+                        </div>
                     </div>
-                </div>
+
+                    <div id="errorMessage"
+                        class="hidden p-4 bg-red-50 dark:bg-red-900/10 border border-red-200 dark:border-red-800 rounded-lg">
+                        <div class="flex items-center gap-2 text-red-800 dark:text-red-200">
+                            <iconify-icon icon="lucide:alert-circle" width="18"></iconify-icon>
+                            <span class="text-sm font-medium">Failed to send message. Please try again.</span>
+                        </div>
+                    </div>
+
+                    <div id="formFields" class="pt-0">
+                        <div class="mb-4">
+                            <label for="sender_email"
+                                class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
+                                Your Email
+                            </label>
+                            <input type="email" id="sender_email" name="email" required
+                                class="w-full px-4 py-2.5 text-sm bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-zinc-600 focus:border-transparent transition-all placeholder:text-zinc-400 dark:placeholder:text-zinc-600"
+                                placeholder="your.email@example.com">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="message"
+                                class="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
+                                Message
+                            </label>
+                            <textarea id="message" name="message" required rows="4"
+                                class="w-full px-4 py-2.5 text-sm bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-zinc-600 focus:border-transparent transition-all resize-none placeholder:text-zinc-400 dark:placeholder:text-zinc-600"
+                                placeholder="Your message here..."></textarea>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <button type="submit" id="submitBtn"
+                                class="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-sm font-medium rounded-lg hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors duration-200">
+                                <span id="btnText">Send Message</span>
+                                <iconify-icon id="btnIcon" icon="lucide:send" width="14"></iconify-icon>
+                                <div id="btnSpinner" class="spinner hidden"></div>
+                            </button>
+                            <button type="button" id="cancelBtn"
+                                class="px-4 py-2.5 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 text-sm font-medium rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors duration-200">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </section>
+        </div>
+
+        <button id="emailToggle"
+            class="pointer-events-auto group flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-medium shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 ease-out focus:outline-none ring-1 ring-black/5 dark:ring-white/5">
+            <iconify-icon icon="lucide:mail" width="18" class="group-hover:scale-110 transition-transform duration-300"></iconify-icon>
+            <span>Contact</span>
+            <iconify-icon id="emailChevron" icon="lucide:chevron-up" width="14" stroke-width="2" class="transition-transform duration-300 ml-1"></iconify-icon>
+        </button>
+    </div>
 
     </main>
 
@@ -676,13 +635,53 @@
 
     <footer class="w-full max-w-2xl mx-auto px-6 py-10 border-t border-zinc-100 dark:border-zinc-800">
         <div class="flex items-center justify-between text-xs text-zinc-400 dark:text-zinc-500">
-            <span>Last updated 01/01/2026</span>
+            <span id="lastUpdatedText">Last updated just now</span>
             <div class="flex items-center gap-1">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                 <span>Open for work</span>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Real-time relative time for "Last updated"
+        function updateRelativeTime() {
+            // Tanggal update terakhir portofolio
+            const lastUpdatedDate = new Date('2026-06-22T08:50:00+07:00');
+            const now = new Date();
+            const diffInSeconds = Math.floor((now - lastUpdatedDate) / 1000);
+            
+            let timeString = '';
+            if (diffInSeconds < 60) timeString = 'just now';
+            else if (diffInSeconds < 3600) {
+                const mins = Math.floor(diffInSeconds / 60);
+                timeString = mins + (mins === 1 ? ' minute ago' : ' minutes ago');
+            }
+            else if (diffInSeconds < 86400) {
+                const hrs = Math.floor(diffInSeconds / 3600);
+                timeString = hrs + (hrs === 1 ? ' hour ago' : ' hours ago');
+            }
+            else if (diffInSeconds < 2592000) {
+                const days = Math.floor(diffInSeconds / 86400);
+                timeString = days + (days === 1 ? ' day ago' : ' days ago');
+            }
+            else if (diffInSeconds < 31536000) {
+                const months = Math.floor(diffInSeconds / 2592000);
+                timeString = months + (months === 1 ? ' month ago' : ' months ago');
+            }
+            else {
+                const years = Math.floor(diffInSeconds / 31536000);
+                timeString = years + (years === 1 ? ' year ago' : ' years ago');
+            }
+            
+            document.getElementById('lastUpdatedText').textContent = 'Last updated ' + timeString;
+        }
+        
+        updateRelativeTime();
+        // Update setiap menit agar tetap realtime tanpa harus refresh
+        setInterval(updateRelativeTime, 60000);
+    </script>
+
 
 
 </body>

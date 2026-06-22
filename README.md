@@ -1,9 +1,9 @@
-# Zevaldo Trijialghi | Software Engineer & Founder
+# Zevaldo Trijialghi | Software Engineer & Creator
 
 This project showcase my work as a SaaS developer.
 
 
-## � Local Development
+##  Local Development
 
 To run this project locally for development or inspection:
 
